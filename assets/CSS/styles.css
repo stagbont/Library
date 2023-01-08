@@ -110,3 +110,15 @@ nav h1 {
     margin-bottom: 50px;
 }
 
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyright {
+    color: #707070;
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 60px;
+}
