@@ -1,13 +1,16 @@
 // Open modal
 const addButton = document.querySelector('.add__button'),
-      modalContainer = document.querySelector('.modal-container');
+      modalContainer = document.querySelector('.modal-container'),
+      closeButton = document.querySelector('.close-btn');
 
 addButton.addEventListener('click', () => {
     modalContainer.classList.add('show-modal');
 });
 
 // Close modal
-
+closeButton.addEventListener("click", () => {
+    modalContainer.classList.remove('show-modal');
+})
 
 let myLibrary = [];
 

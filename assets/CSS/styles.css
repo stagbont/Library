@@ -159,6 +159,7 @@ footer {
 }
 
 .modal {
+    z-index: 2;
     background-color: #707070;
     padding: 30px 25px;
     border-radius: 15px;
@@ -167,6 +168,7 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .5);
 }
 
 .modal h2 {
@@ -216,4 +218,24 @@ footer {
 
 .submit-btn button:hover {
     background-color: #000000;
+}
+
+.close-btn {
+    border: 2px #FFFFFF solid;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 22px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background: #2d2d2d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
 }
