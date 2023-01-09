@@ -5,6 +5,7 @@
 }
 
 body {
+    position: relative;
     font-family: 'Poppins', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif  ;
 }
 
@@ -38,6 +39,12 @@ nav h1 {
     font-size: 26px;
     font-weight: 600;
     color: #707070;
+    transition: all 0.3s ease-in-out;
+}
+
+.add__button:hover {
+    background-color: #2d2d2d;
+    color: #FFFFFF;
 }
 
 .shelves {
@@ -101,8 +108,14 @@ nav h1 {
     font-weight: 500;
     font-size: 22px;
     color: #707070;
+    transition: all 0.3s ease-in-out;
 }
 
+.book-btn:hover {
+    background-color: #2d2d2d;
+    color: #FFFFFF;
+}
+ 
 .book-read {
     margin-bottom: 20px;
 }
@@ -124,7 +137,83 @@ footer {
     margin-bottom: 60px;
 }
 
+.modal-container {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, .5);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
 
-@media screen and (min-width: 800px ) {
-  
+.show-modal {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal {
+    background-color: #707070;
+    padding: 30px 25px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.modal h2 {
+    font-weight: 500;
+    color: #FFFFFF;
+    font-size: 22px;
+}
+
+.modal div input {
+    outline: none;
+    padding: 15px 18px;
+    border-radius: 15px;
+    border: none;
+    font-size: 22px;
+    font-weight: 400;
+    color: #707070;
+}
+
+.modal .read {
+    font-weight: 400;
+    font-size: 22px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.checkbox {
+    width: 30px;
+    height: 30px;
+    accent-color: #FFFFFF;
+}
+
+.submit-btn button {
+    width: 300px;
+    height: 60px;
+    border-radius: 15px;
+    border: none;
+    font-size: 22px;
+    font-weight: 500;
+    color: #FFFFFF;
+    background: #2d2d2d;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.submit-btn button:hover {
+    background-color: #000000;
 }

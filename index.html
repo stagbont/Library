@@ -23,102 +23,57 @@
 
         <section class="shelves">
             <div class="book">
-                <h2 class="book-title" id="title">
+                <h2 class="book-title">
                     The Hobbit
                 </h2>
 
                 <div class="bar"></div>
 
-                <p class="book-author" id="author">
+                <p class="book-author">
                     Bob Stanley
                 </p>
 
-                <p class="book-pages" id="pages">
+                <p class="book-pages">
                     122 pages
                 </p>
 
-                <button class="book-read book-btn" id="read">
+                <button class="book-read book-btn">
                     Read
                 </button>
 
-                <button class="book-delete book-btn" id="delete">
-                    Delete
-                </button>
-            </div>
-
-            <div class="book">
-                <h2 class="book-title" id="title">
-                    The Hobbit
-                </h2>
-
-                <div class="bar"></div>
-
-                <p class="book-author" id="author">
-                    Bob Stanley
-                </p>
-
-                <p class="book-pages" id="pages">
-                    122 pages
-                </p>
-
-                <button class="book-read book-btn" id="read">
-                    Read
-                </button>
-
-                <button class="book-delete book-btn" id="delete">
-                    Delete
-                </button>
-            </div>
-
-            <div class="book">
-                <h2 class="book-title" id="title">
-                    The Hobbit
-                </h2>
-
-                <div class="bar"></div>
-
-                <p class="book-author" id="author">
-                    Bob Stanley
-                </p>
-
-                <p class="book-pages" id="pages">
-                    122 pages
-                </p>
-
-                <button class="book-read book-btn" id="read">
-                    Read
-                </button>
-
-                <button class="book-delete book-btn" id="delete">
-                    Delete
-                </button>
-            </div>
-
-            <div class="book">
-                <h2 class="book-title" id="title">
-                    The Hobbit
-                </h2>
-
-                <div class="bar"></div>
-
-                <p class="book-author" id="author">
-                    Bob Stanley
-                </p>
-
-                <p class="book-pages" id="pages">
-                    122 pages
-                </p>
-
-                <button class="book-read book-btn" id="read">
-                    Read
-                </button>
-
-                <button class="book-delete book-btn" id="delete">
+                <button class="book-delete book-btn">
                     Delete
                 </button>
             </div>
         </section>
     </main>
+
+    <section class="modal-container">
+        <div class="modal">
+            <h2>Add new book</h2>
+    
+            <div class="title" id="title">
+                <input type="text" name="title" id="book__title" placeholder="Title"> 
+            </div>
+    
+            <div class="author" id="author">
+                <input type="text" name="author" id="book__author" placeholder="Author"> 
+            </div>
+            
+            <div class="pages" id="pages">
+                <input type="text" name="pages" id="book__pages" placeholder="Pages"> 
+            </div>
+    
+            <div class="read" id="read">
+                Have you read it?
+                <input class="checkbox" type="checkbox" name="read" id="book__read">
+            </div>
+    
+            <div class="submit-btn" id="submit">
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <p class="copyright">
