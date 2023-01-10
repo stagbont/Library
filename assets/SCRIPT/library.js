@@ -15,6 +15,7 @@ closeButton.addEventListener("click", () => {
 // Library Functionality
 
 getInputData();
+deleteBook();
 
 let myLibrary = [];
 
@@ -33,7 +34,9 @@ function addBookToLibrary() {
     
     for (let i = 0; i < myLibrary.length; i++) {
         let book = document.createElement('div');
-        book.classList = 'book';
+        book.classList = `book`;
+        book.classList.add(`book${i}`);
+        book.setAttribute('data-key', `${i}`);
 
         let bookTitle = document.createElement('div');
         bookTitle.className = 'book-title';
@@ -72,6 +75,8 @@ function addBookToLibrary() {
         book.appendChild(bookRead);
         book.appendChild(bookDelete);
     }
+
+    deleteBook();
 }
 
 function getInputData() {
@@ -103,4 +108,19 @@ function removeAllChildNodes(parent) {
         parent.removeChild(parent.firstChild);
     }
 }
+
+function deleteBook() {
+    const books = document.querySelectorAll(".book");
+    const delBtns = document.querySelectorAll(".book-delete");
+
+    delBtns.forEach(del => {
+        del.addEventListener("click", (e) => {
+            let num = e.target.parentNode.dataset.key;
+            num = parseInt(num);
+            myLibrary.splice(num, 1);
+            addBookToLibrary();
+        })
+    })
+}
+
 
