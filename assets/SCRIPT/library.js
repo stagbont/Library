@@ -127,6 +127,17 @@ function deleteBook() {
     })
 }
 
+function readBook() {
+    const ReadBtns = document.querySelectorAll(".book-read");
 
+    ReadBtns.forEach(read => {
+        read.addEventListener("click", (e) => {
+            let num = e.target.parentNode.dataset.key;
+            num = parseInt(num);
+            
+            
+        })
+    })
+}
 
 
