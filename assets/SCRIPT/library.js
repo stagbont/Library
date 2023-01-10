@@ -59,8 +59,12 @@ function addBookToLibrary() {
 
         if(myLibrary[i].status == 'on') {
             myLibrary[i].status = 'Read';
+            bookRead.textContent = `${myLibrary[i].status}`;
+        } else {
+            myLibrary[i].status = 'Not Read';
+            bookRead.textContent = `${myLibrary[i].status}`;
         }
-        bookRead.textContent = `${myLibrary[i].status}`;
+        
 
         let bookDelete = document.createElement('button');
         bookDelete.className = 'book-delete';
@@ -122,5 +126,7 @@ function deleteBook() {
         })
     })
 }
+
+
 
 
