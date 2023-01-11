@@ -78,6 +78,7 @@ function addBookToLibrary() {
     }
 
     deleteBook();
+    readToggle();
 }
 
 function getInputData() {
@@ -124,3 +125,20 @@ function deleteBook() {
     })
 }
 
+function readToggle() {
+    const readBtns = document.querySelectorAll('.book-read');
+    
+    readBtns.forEach(readBtn => {
+        readBtn.addEventListener("click", (e) => {
+            let BookIndex = e.target.parentNode.dataset.key;
+
+            if (myLibrary[BookIndex].status == true) {
+                myLibrary[BookIndex].status = false;
+            } else {
+                myLibrary[BookIndex].status = true;
+            }
+
+            addBookToLibrary();
+        })
+    })
+}
