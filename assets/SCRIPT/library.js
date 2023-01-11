@@ -13,9 +13,9 @@ closeButton.addEventListener("click", () => {
 })
 
 // Library Functionality
-
 getInputData();
 deleteBook();
+
 
 let myLibrary = [];
 
@@ -56,15 +56,12 @@ function addBookToLibrary() {
         let bookRead = document.createElement('button');
         bookRead.className = 'book-read';
         bookRead.classList.add('book-btn');
-
-        if(myLibrary[i].status == 'on') {
-            myLibrary[i].status = 'Read';
-            bookRead.textContent = `${myLibrary[i].status}`;
-        } else {
-            myLibrary[i].status = 'Not Read';
-            bookRead.textContent = `${myLibrary[i].status}`;
-        }
         
+        if (myLibrary[i].status === true) {
+            bookRead.textContent = 'Read';
+        } else {
+            bookRead.textContent = 'Not Read';
+        }
 
         let bookDelete = document.createElement('button');
         bookDelete.className = 'book-delete';
@@ -97,7 +94,7 @@ function getInputData() {
         let title = titleInput.value;
         let author = authorInput.value;
         let pages = pagesInput.value;
-        let status = readInput.value;
+        let status = readInput.checked;
 
         let book = new Book(title, author, pages, status);
 
@@ -126,18 +123,4 @@ function deleteBook() {
         })
     })
 }
-
-function readBook() {
-    const ReadBtns = document.querySelectorAll(".book-read");
-
-    ReadBtns.forEach(read => {
-        read.addEventListener("click", (e) => {
-            let num = e.target.parentNode.dataset.key;
-            num = parseInt(num);
-            
-            
-        })
-    })
-}
-
 
