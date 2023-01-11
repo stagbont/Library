@@ -14,8 +14,6 @@ closeButton.addEventListener("click", () => {
 
 // Library Functionality
 getInputData();
-deleteBook();
-
 
 let myLibrary = [];
 
@@ -102,6 +100,7 @@ function getInputData() {
         myLibrary.push(book);
 
         addBookToLibrary();
+        form.reset();
     })
 }
 
